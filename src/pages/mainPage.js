@@ -26,14 +26,6 @@ export const MainPage = () => {
     setrightReg(rightReg); // translate regis component 1000px to the right
   }
  
-  const registerUser = () => {
-    animation("translate-x-[1000px]","scale-0","scale-100","-translate-x-[]")
-  };
-
-  const login = () => {
-    animation("translate-x-[]","scale-100","scale-0","translate-x-[1000px]")
-  };
-
   return (
     <main className="flex flex-col gap-2 bg-licorice justify-center items-center w-screen h-screen">
       <div className={`flex gap-2 transition ${opacity} bg-cherryRed p-2 duration-150 rounded-md`}>
@@ -49,13 +41,13 @@ export const MainPage = () => {
       </div>
       <div className="flex w-4/5 gap-2 justify-center">
         <button
-          onClick={() => registerUser()}
+          onClick={() => animation("translate-x-[1000px]","scale-0","scale-100","-translate-x-[]")}
           className="p-2 cursor-pointer font-bold rounded-md text-offWhite bg-cherryRed transition duration-200 w-2/5 hover:-translate-y-1"
         >
           Register
         </button>
         <button
-          onClick={() => login()}
+          onClick={() => animation("translate-x-[]","scale-100","scale-0","translate-x-[1000px]")}
           className="p-2 cursor-pointer font-bold rounded-md text-offWhite bg-cherryRed transition duration-200 w-2/5 hover:-translate-y-1 "
         >
           Login
