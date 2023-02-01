@@ -28,6 +28,7 @@ export const Login = ({ setMsg, setOpacity }) => {
   };
 
 // login function it will check in the database if there is a user with this credentials
+console.log(process.env.REACT_APP_URL)
   const handleClick = async () => {
     try {
       setLoading(true);// set loading to true
