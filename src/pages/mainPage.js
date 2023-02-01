@@ -11,6 +11,14 @@ export const MainPage = () => {
   const [Msg, setMsg] = useState("");
   const [opacity, setOpacity] = useState("opacity-0");
 
+  useEffect(() => {
+    if(opacity === "opacity-100"){
+      setTimeout(() => {
+        setOpacity("opacity-0")
+      },3000)
+    }
+  },[opacity])
+
   const animation = (leftLogin,scaleLogin,scaleReg,rightReg) => {
     setLeftLogin(leftLogin); // translate login component 1000px to the left
     setScaleLogin(scaleLogin); // scale to 0
