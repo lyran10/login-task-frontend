@@ -12,7 +12,7 @@ export const MainPage = () => {
   const [opacity, setOpacity] = useState("opacity-0");
 
   useEffect(() => {
-    if(opacity === "opacity-100"){
+    if(opacity === "opacity-100"){ // show the message for three seconds, then by making it 0 again it will disappear agin
       setTimeout(() => {
         setOpacity("opacity-0")
       },3000)
